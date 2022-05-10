@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="VisitPlann.com" >
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/iconefinal"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/iconefinal_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication_Empty"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="VisitPlann.com.Login"
+            android:exported="true"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="VisitPlann.com.VideoActivityDisplay"
+            android:exported="false"
+            android:launchMode="singleInstancePerTask"
+            android:parentActivityName="VisitPlann.com.MainActivity" />
+        <activity
+            android:name="VisitPlann.com.MainActivity"
+            android:exported="false"
+            android:launchMode="singleInstancePerTask">
+
+        </activity>
+        <activity
+            android:name="VisitPlann.com.Register"
+            android:exported="true"
+            android:launchMode="singleInstancePerTask">
+
+        </activity>
+    </application>
+
+</manifest>
